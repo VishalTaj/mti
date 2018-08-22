@@ -17,7 +17,7 @@ Run this command in terminal
 
 == Setup
 
-To create a Sub Class run command
+To create a SubClass run command
 
 
   $ rails g mti:subclass ChildModel ParentModel
