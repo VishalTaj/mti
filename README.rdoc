@@ -1,3 +1,25 @@
 = Mutiple Table Inheritance (MTI)
 
-This project rocks and uses MIT-LICENSE.
+== Description
+
+MTI is a gem designed to allow Multiple Table Inheritance for Rails Application.
+
+== Installation
+
+Add this to line gem list and run bundle install
+
+  $ gem `mti` 
+
+Run this command in terminal
+
+  $ rails g mti:install
+
+
+== Setup
+
+To create a Sub Class run command
+
+
+  $ rails g mti:subclass ChildModel ParentModel
+
+
