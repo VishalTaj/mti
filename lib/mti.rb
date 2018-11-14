@@ -24,8 +24,8 @@ module Mti
       super
       @@mti_models.map {|model|
         mti_model_column = model.to_s.camelize.constantize.column_names 
-        self.send("build_#{model.to_s}", attributes.reject {|key, val| val unless mti_model_column.include? key.to_s}) 
-      } unless attributes.nil?
+        self.send("build_#{model.to_s}", attributes.to_h.reject {|key, val| val unless mti_model_column.include? key.to_s}) 
+      }
     end
   end
 end
