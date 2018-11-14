@@ -19,7 +19,13 @@ Run this command in terminal
 
 To create a SubClass run command
 
-
   $ rails g mti:subclass ChildModel ParentModel
 
+Add `has_subclass` association to parent model
+
+  $ has_subclass :child_model 
+
+
+
+That's all now you are ready to go... :)
 
