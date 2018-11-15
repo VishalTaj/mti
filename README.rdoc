@@ -2,7 +2,13 @@
 
 == Description
 
-MTI is a gem designed to allow Multiple Table Inheritance for Rails Application.
+MTI is a gem designed to allow Multiple Table Inheritance for Rails Application. This will give us the previlage to access or assign *sub-model* attributes from *parent* *model* .
+
+Like +has_one+ association +has_subclass+ also follows *one_to_one* *mapping*. This method should only be used if the other class contains the foreign key.
+
+Use +joins+ to query through this association. 
+
+ eg: ParenModel.joins(:child_model).where(child_model: {abc: 'xyz'})
 
 == Installation
 
@@ -21,11 +27,10 @@ To create a SubClass run command
 
   $ rails g mti:subclass ChildModel ParentModel
 
-Add `has_subclass` association to parent model
+Add +has_subclass+ association to *ParentModel*
 
-  $ has_subclass :child_model 
+  $ has_subclass :child_model
 
 
 
-That's all now you are ready to go... :)
-
+That's all! you are ready to go... :)
