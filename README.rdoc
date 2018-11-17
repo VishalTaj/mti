@@ -32,5 +32,14 @@ Add +has_subclass+ association to *ParentModel*
   $ has_subclass :child_model
 
 
+== Test
+
+If you are using this gem for the first time please do a migration for our dummy app.
+
+  $ cd test/dummy/app/ && rake db:migrate
+
+Once done with the migration go back to the gem root directory then:
+
+  $ rake test
 
 That's all! you are ready to go... :)
