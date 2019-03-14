@@ -11,6 +11,8 @@ gemspec
 # your gem to rubygems.org.
 
 # To use a debugger
-gem 'byebug', group: [:development, :test]
-gem 'sqlite3', group: [:development, :test]
+group :development, :test do
+  gem 'byebug'
+  gem 'sqlite3', '~> 1.3.6'
+end
 
